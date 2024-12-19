@@ -11,18 +11,12 @@ body {
     z-index: 0;
 }
 
-.map-overlay,
-.description-overlay,
-.description-overlay2,
-.description-overlay3,
-.description-overlay4,
-.legend,
-#bubble-legend,
-#second-legend {
-    font-family: 'Raleway', sans-serif;
+.map-overlay, .description-overlay, .description-overlay2, .description-overlay3 {
     position: absolute;
     z-index: 1;
+    font-family: 'Raleway', sans-serif;
     color: rgb(255, 255, 255);
+    pointer-events: none;
 }
 
 .map-overlay {
@@ -42,22 +36,31 @@ body {
     margin: 0 0 10px;
 }
 
-/* Legend styles */
-.legend-bar {
-    height: 20px;
-    width: 20px;
-    border-radius: 3px;
-    display: inline-block;
-    margin-right: 5px;
+.description-overlay {
+    top: 125px;
+    left: 20px;
+    right: 20px;
 }
 
-.legend {
+.description-overlay2 {
+    top: 205px;
+    left: 20px;
+    right: 20px;
+}
+
+.description-overlay3 {
+    top: 265px;
+    left: 20px;
+    right: 20px;
+}
+
+.legend, #bubble-legend, #second-legend {
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 3px;
-    bottom: 30px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
     padding: 10px;
     position: absolute;
-    right: 10px;
     z-index: 1;
 }
 
@@ -69,6 +72,7 @@ body {
     left: 17px;
     border-radius: 3px;
     width: 120px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -76,10 +80,15 @@ body {
     font-size: 13px;
     color: #404040;
     display: block;
+    margin: 0;
     padding: 16px;
-    text-align: center;
     text-decoration: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+#menu a:last-child {
+    border: none;
 }
 
 #menu a:hover {
@@ -92,6 +101,14 @@ body {
     color: #ffffff;
 }
 
-#menu a.active:hover {
-    background: rgba(48, 116, 164, 0.4);
+.legend h4 {
+    margin: 0 0 10px;
 }
+
+.legend div span, .legend-bar {
+    border-radius: 50%;
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+}
+
