@@ -1,3 +1,4 @@
+/* General body and map styling */
 body {
     margin: 0;
     padding: 0;
@@ -11,19 +12,17 @@ body {
     z-index: 0;
 }
 
-.map-overlay, .description-overlay, .description-overlay2, .description-overlay3 {
-    position: absolute;
-    z-index: 1;
-    font-family: 'Raleway', sans-serif;
-    color: rgb(255, 255, 255);
-    pointer-events: none;
-}
-
+/* Overlay styles for titles and descriptions */
 .map-overlay {
+    position: absolute;
     top: 20px;
     left: 20px;
     right: 20px;
+    z-index: 1;
     letter-spacing: 2px;
+    font-family: 'Raleway', sans-serif;
+    color: rgb(255, 255, 255);
+    pointer-events: none;
 }
 
 .map-overlay h2 {
@@ -36,34 +35,46 @@ body {
     margin: 0 0 10px;
 }
 
-.description-overlay {
-    top: 125px;
+/* Description overlays for additional information */
+.description-overlay, 
+.description-overlay2, 
+.description-overlay3 {
+    position: absolute;
     left: 20px;
     right: 20px;
+    z-index: 1;
+    letter-spacing: 1px;
+    font-family: 'Raleway', sans-serif;
+    color: rgb(255, 255, 255);
+    pointer-events: none;
+}
+
+.description-overlay {
+    top: 125px;
 }
 
 .description-overlay2 {
     top: 205px;
-    left: 20px;
-    right: 20px;
 }
 
 .description-overlay3 {
     top: 265px;
-    left: 20px;
-    right: 20px;
 }
 
-.legend, #bubble-legend, #second-legend {
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 3px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
-    padding: 10px;
-    position: absolute;
-    z-index: 1;
+.description-overlay p, 
+.description-overlay2 p, 
+.description-overlay3 p {
+    font-size: 10px;
+    margin: 0 0 10px;
 }
 
+/* Popup styling for Mapbox popups */
+.mapboxgl-popup-content {
+    max-width: 400px;
+    font: 11px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+/* Menu styles */
 #menu {
     background: rgba(255, 255, 255, 0.4);
     position: absolute;
@@ -101,14 +112,89 @@ body {
     color: #ffffff;
 }
 
+#menu a.active:hover {
+    background: rgba(48, 116, 164, 0.4);
+}
+
+/* Legend styling */
+.legend {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 3px;
+    bottom: 30px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    padding: 10px;
+    position: absolute;
+    right: 10px;
+    z-index: 1;
+}
+
 .legend h4 {
     margin: 0 0 10px;
 }
 
-.legend div span, .legend-bar {
+.legend div span {
     border-radius: 50%;
     display: inline-block;
     height: 10px;
+    margin-right: 5px;
     width: 10px;
 }
 
+/* Bubble legend */
+#bubble-legend {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 3px;
+    bottom: 30px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    padding: 10px;
+    position: absolute;
+    right: 10px;
+    z-index: 1;
+}
+
+#bubble-legend h4 {
+    margin: 0 0 10px;
+}
+
+#bubble-legend div span {
+    border-radius: 50%;
+    display: inline-block;
+    height: 10px;
+    margin-right: 5px;
+    width: 10px;
+}
+
+/* Secondary legend for additional information */
+#second-legend {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 3px;
+    bottom: 25px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    padding: 10px;
+    position: absolute;
+    right: 10px;
+    z-index: 1;
+}
+
+#second-legend h4 {
+    margin: 0 0 10px;
+}
+
+#second-legend div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+
+/* Common legend bar style */
+.legend-bar {
+    height: 20px;
+    width: 20px;
+    border-radius: 3px;
+    margin-right: 0;
+    display: inline-block;
+}
