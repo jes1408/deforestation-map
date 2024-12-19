@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Display a map on a webpage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>Display a map on a webpage</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav id="menu"></nav>
@@ -18,16 +20,19 @@
         <p style="font-size: 16px">Assess deforestation risk locations by:</p>
     </div>
     <div class="description-overlay">
-        <p>Click to see hot/cold spots of risk locations //</p>
-        <p>Zoom & hover on point to see more details</p>
+        <p style="font-size: 11px; margin-top: 30px; margin-left: 130px;">Click to see hot/cold spots of risk locations //</p>
+        <p style="font-size: 11px; margin-left: 130px;">Zoom & hover on point to see more details</p>
     </div>
     <div class="description-overlay2">
-        <p>Click to see relative size of risk areas //</p>
-        <p>Zoom to see risk areas by economic sectors</p>
+        <p style="font-size: 11px; margin-top: 10px; margin-left: 130px;">Click to see relative size of risk areas //</p>
+        <p style="font-size: 11px; margin-left: 130px;">Zoom to see risk areas by economic sectors</p>
     </div>
     <div class="description-overlay3">
-        <p>Click to see risk area by state //</p>
-        <p>Zoom to see risk area by district</p>
+        <p style="font-size: 11px; margin-top: 5px; margin-left: 130px;">Click to see risk area by state //</p>
+        <p style="font-size: 11px; margin-top: 5px; margin-left: 130px;">Zoom to see risk area by district</p>
+    </div>
+    <div class="description-overlay4">
+        <p style="font-size: 20px; margin-top: 5px;">Assess deforestation risk locations by:</p>
     </div>
     <div id="second-legend" class="legend">
         <h4>Heat Map Clusters</h4>
